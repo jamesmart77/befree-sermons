@@ -1,6 +1,20 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
 nav {
     height: 75px;
 }
+
 nav a {
     color: #93b3d0;
     position: absolute;
@@ -15,10 +29,29 @@ nav a {
     display: inline-flex;
 }
 
-.logo-wrapper{
+.logo-wrapper {
     margin: 5px 0;
 }
 
-.header-logo{
+.header-logo {
     width: 100px;
+}
+
+/* BODY */
+
+.dash-title {
+    font-size: 3rem;
+}
+
+.mission-statement {
+    font-size: 1.4rem;
+}
+
+/* FOOTER */
+
+.page-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
 }
