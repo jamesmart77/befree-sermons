@@ -56,7 +56,7 @@ nav a {
 /* FOOTER */
 
 .page-footer {
-    position: absolute;
+    position: sticky;
     bottom: 0;
     width: 100%;
     left: 0;
@@ -65,4 +65,13 @@ nav a {
 
 .footer-copyright{
     background-color: #455a64 !important;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 768px) {
+
+    .page-footer {
+        position: relative;
+    }
 }
