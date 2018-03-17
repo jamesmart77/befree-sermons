@@ -1,9 +1,7 @@
 const router = require("express").Router();
-const searchRoute = require("./search");
-const articleRoute = require("./article");
+const sermonRoute = require("./sermon");
 
-// Book routes
-router.use("/search", searchRoute);
-router.use("/article", articleRoute);
+//routes
+router.use("/sermon", sermonRoute);
 
 module.exports = router;
