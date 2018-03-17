@@ -5,40 +5,36 @@ const Footer = () =>
 
     <footer className="page-footer">
         <div className="container">
-        <div className="row">
-            <div className="col l6 s12">
-            <h5 className="white-text">Footer Content</h5>
-            <p className="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+            <div className="row">
+                <div className="col l6 s12">
+                    <a href="http://befree.church/">
+                        <h5 className="white-text">BeFree Community Church</h5>
+                    </a>
+
+                    <p className="grey-text text-lighten-4">One Church, Five Locations</p>
+
+                    <a href="http://befree.church/our-distinctives">
+                        <p className="grey-text text-lighten-4">What We Believe</p>
+                    </a>
+                </div>
+                <div className="col l4 offset-l2 s12">
+                    <h5 className="white-text">Campuses</h5>
+                    <ul>
+                        <li><a className="grey-text text-lighten-3" href="http://befree.church/alton-home" target="on_blank">Alton</a></li>
+                        <li><a className="grey-text text-lighten-3" href="http://befree.church/barrington-home" target="on_blank">Barrington</a></li>
+                        <li><a className="grey-text text-lighten-3" href="http://befree.church/dover-home" target="on_blank">Dover</a></li>
+                        <li><a className="grey-text text-lighten-3" href="http://befree.church/newmarket-home" target="on_blank">Newmarket</a></li>
+                        <li><a className="grey-text text-lighten-3" href="http://befree.church/somersworth-home" target="on_blank">Somersworth</a></li>
+                    </ul>
+                </div>
             </div>
-            <div className="col l4 offset-l2 s12">
-            <h5 className="white-text">Links</h5>
-            <ul>
-                <li><a className="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                <li><a className="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                <li><a className="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                <li><a className="grey-text text-lighten-3" href="#!">Link 4</a></li>
-            </ul>
-            </div>
-        </div>
         </div>
         <div className="footer-copyright">
-        <div className="container">
-        © 2014 Copyright Text
-        <a className="grey-text text-lighten-4 right" href="#!">More Links</a>
-        </div>
+            <div className="container">
+                © 2018 Copyright
+                <a className="grey-text text-lighten-4 right" href="http://befree.church/">BeFree Church</a>
+            </div>
         </div>
     </footer>
-    // <footer className="page-footer footer-fixed teal lighten-1 center-align">
-    //     <div className="footer-copyright">
-    //         <div className="container">
-    //             <div>
-    //                 &copy;
-    //                 <span id="copyright">2018, </span>
-    //                 <span><a className="footer-yellow">newsAnnotater</a>. All rights reserved.</span>
-    //             </div>
-    //         </div>
-    //     </div>
-    // </footer>
-
 
 export default Footer;

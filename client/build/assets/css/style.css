@@ -39,6 +39,12 @@ nav a {
 
 /* BODY */
 
+.main-body{
+    background-color: #ebebeb;
+    color: #37474f;
+    height: 100vh;
+}
+
 .dash-title {
     font-size: 3rem;
 }
@@ -54,4 +60,9 @@ nav a {
     bottom: 0;
     width: 100%;
     left: 0;
+    background-color: #607d8b !important;
+}
+
+.footer-copyright{
+    background-color: #455a64 !important;
 }

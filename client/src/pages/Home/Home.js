@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Row } from "../../components/Grid";
-import ArticleCard from "../../components/ArticleCard";
-import SavedCard from "../../components/SavedCard";
+import HeaderSection from "../../components/HeaderSection";
 import Button from '../../components/Button';
 import API from '../../utils/API'
 
@@ -112,23 +111,8 @@ class Home extends Component {
 
   render() {
     return (
-        <main>
-            <div className='container padding-1'>
-                {/* search news section */}
-                <div className="col s12 m12 l12 xl12">
-                    <Row>
-                        <div>
-                            <h4 className='dash-title center-align'>Sermons</h4>
-                        </div>
-                        <div>
-                            <p className="mission-statement">
-                            Befree Community Church in Somersworth is a family of ordinary people doing life together so we can love God, love others, and make disciples. Since God first loved us in spite of our brokenness, all are welcome in our community.
-                            </p>
-                        </div>
-
-                    </Row>
-                </div>
-            </div>
+        <main className="main-body">
+            <HeaderSection/>
         </main>);
     }
 }
