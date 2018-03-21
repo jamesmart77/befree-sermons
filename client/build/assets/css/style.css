@@ -42,7 +42,7 @@ nav a {
 .main-body{
     background-color: #ebebeb;
     color: #37474f;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .dash-title {
@@ -53,13 +53,22 @@ nav a {
     font-size: 1.4rem;
 }
 
+/* SERMON SECTION */
+.sermon-hr{
+    margin-bottom: 2.5rem;
+}
+
+.sermon-collection{
+    /* margin-bottom: 75px; */
+}
+
 /* FOOTER */
 
 .page-footer {
-    position: sticky;
-    bottom: 0;
+    /* position: sticky; */
+    /* bottom: 0;
     width: 100%;
-    left: 0;
+    left: 0; */
     background-color: #607d8b !important;
 }
 
@@ -72,6 +81,6 @@ nav a {
 @media only screen and (max-width: 768px) {
 
     .page-footer {
-        position: relative;
+        /* position: relative; */
     }
 }

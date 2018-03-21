@@ -10,6 +10,7 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   create: (req, res) => {
+    console.log(req.body);
     db.Sermon
       .create(req.body)
       .then(dbModel => {
