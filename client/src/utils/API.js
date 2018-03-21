@@ -6,7 +6,7 @@ export default {
   searchNews: (searchParams) => axios.post("/api/search", searchParams),
   
   //call news api based on search criteria
-  getSavedArticles: () => axios.get("/api/article"),
+  getSavedSermons: () => axios.get("/api/sermon"),
 
   //save new article
   saveArticle: (articleParams) => axios.post("/api/article", articleParams),

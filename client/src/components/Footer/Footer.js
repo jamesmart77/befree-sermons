@@ -6,7 +6,7 @@ const Footer = () =>
     <footer className="page-footer">
         <div className="container">
             <div className="row">
-                <div className="col l6 s12">
+                <div className="col s6">
                     <a href="http://befree.church/">
                         <h5 className="white-text">BeFree Community Church</h5>
                     </a>
@@ -17,7 +17,7 @@ const Footer = () =>
                         <p className="grey-text text-lighten-4">What We Believe</p>
                     </a>
                 </div>
-                <div className="col l4 offset-l2 s12">
+                <div className="col s6 l4 offset-l2">
                     <h5 className="white-text">Campuses</h5>
                     <ul>
                         <li><a className="grey-text text-lighten-3" href="http://befree.church/alton-home" target="on_blank">Alton</a></li>

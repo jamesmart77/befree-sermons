@@ -22,6 +22,10 @@ const SermonSchema = new Schema({
   date: {
     type: Date,
     required: true
+  },
+  description: {
+    type: String,
+    required: false
   }
 });
 
