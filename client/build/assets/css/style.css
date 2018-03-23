@@ -5,6 +5,7 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    min-width: 340px;
 }
 
 main {
@@ -15,7 +16,8 @@ nav {
     height: 75px;
 }
 
-nav a {
+.logo-wrapper {
+    margin: 5px 0;
     color: #93b3d0;
     position: absolute;
     font-size: 2.7rem;
@@ -29,8 +31,15 @@ nav a {
     display: inline-flex;
 }
 
-.logo-wrapper {
-    margin: 5px 0;
+.nav-link {
+    color: #37474f;
+    height: 75px;
+    line-height: 75px;
+}
+
+.nav-link:hover {
+    background-color: #607d8b;
+    color: #ebebeb;
 }
 
 .header-logo {
@@ -39,7 +48,7 @@ nav a {
 
 /* BODY */
 
-.main-body{
+.main-body {
     background-color: #ebebeb;
     color: #37474f;
     /* height: 100vh; */
@@ -54,11 +63,12 @@ nav a {
 }
 
 /* SERMON SECTION */
-.sermon-hr{
+
+.sermon-hr {
     margin-bottom: 2.5rem;
 }
 
-.sermon-collection{
+.sermon-collection {
     /* margin-bottom: 75px; */
 }
 
@@ -72,14 +82,13 @@ nav a {
     background-color: #607d8b !important;
 }
 
-.footer-copyright{
+.footer-copyright {
     background-color: #455a64 !important;
 }
 
 /* MEDIA QUERIES */
 
 @media only screen and (max-width: 768px) {
-
     .page-footer {
         /* position: relative; */
     }

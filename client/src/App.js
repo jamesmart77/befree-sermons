@@ -1,6 +1,7 @@
 import React from "react";
 import { Router, Route, Switch } from "react-router-dom";
 import Sermons from "./pages/Sermons";
+import Admin from "./pages/Admin";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer/Footer";
@@ -13,6 +14,7 @@ const App = () =>
       <Nav />
       <Switch>
         <Route exact path="/" component={Sermons} />
+        <Route exact path="/admin" component={Admin} />
         <Route component={NoMatch} />
       </Switch>
       <Footer />
