@@ -61,13 +61,13 @@ class Sermons extends Component {
                <div className="col s12 m12 l12 xl12">
                     <hr className="sermon-hr"/>
                     <Row>
-                        <div className="input-field col s12 m4 l4 xl4 right">
+                        {/* <div className="input-field col s12 m4 l4 xl4 right">
                             <select>
                                 <option value="" disabled defaultValue>Somersworth</option>
                                 <option value="Somersworth">Somersworth</option>
                             </select>
                             <label>Campus</label>
-                        </div>
+                        </div> */}
                     </Row>
                 </div>
 
