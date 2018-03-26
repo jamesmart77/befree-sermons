@@ -18,6 +18,15 @@ class Sermons extends Component {
         savedSermons: []
     };
 
+    componentWillMount(){
+
+        API.validateUser()
+        .then(res => {
+            console.log("user authenticated")
+        })
+        .catch(err => console.log("User auth error: ", err))
+    }
+
     componentDidMount = update => {
         //get previously saved articles
         API.getSavedSermons()
