@@ -19,12 +19,17 @@ class Sermons extends Component {
     };
 
     componentWillMount(){
-
+        //hit api to validate if user is authenticated
+        //if not, redirect to root path
+        const domainURL = window.location.origin;
         API.validateUser()
         .then(res => {
-            console.log("user authenticated")
+            console.log("authentication successful", res);
         })
-        .catch(err => console.log("User auth error: ", err))
+        .catch(err => {
+            console.log("authentication failed", err);
+            window.location = domainURL;
+        })
     }
 
     componentDidMount = update => {
