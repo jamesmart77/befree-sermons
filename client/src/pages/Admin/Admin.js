@@ -160,12 +160,11 @@ class Sermons extends Component {
                         {this.state.savedSermons.map(sermon => (
                             
                             <SermonCard
-                                key = {sermon._id}
+                                key = {sermon._id.toString()}
                                 title={sermon.title}
                                 url = {sermon.link}
                                 date =  {sermon.date}
                                 description = {sermon.description}
-                                // admin = {true}
                             />
                         ))}
                     </div>
