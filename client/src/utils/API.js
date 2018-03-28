@@ -11,6 +11,11 @@ export default {
   //save new sermon
   saveSermon: (params) => axios.post("/api/sermon", params),
   
+  //login
+  login: (params) => axios.post("/api/admin", params),
+
+  validateUser: () => axios.get("/api/admin"),
+
   //save new article
   deleteArticle: (articleId) => axios.delete("/api/article/" + articleId)
 };

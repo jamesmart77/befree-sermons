@@ -18,6 +18,20 @@ class Sermons extends Component {
         savedSermons: []
     };
 
+    componentWillMount(){
+        //hit api to validate if user is authenticated
+        //if not, redirect to root path
+        const domainURL = window.location.origin;
+        API.validateUser()
+        .then(res => {
+            console.log("authentication successful", res);
+        })
+        .catch(err => {
+            console.log("authentication failed", err);
+            window.location = domainURL;
+        })
+    }
+
     componentDidMount = update => {
         //get previously saved articles
         API.getSavedSermons()
@@ -146,12 +160,11 @@ class Sermons extends Component {
                         {this.state.savedSermons.map(sermon => (
                             
                             <SermonCard
-                                key = {sermon._id}
+                                key = {sermon._id.toString()}
                                 title={sermon.title}
                                 url = {sermon.link}
                                 date =  {sermon.date}
                                 description = {sermon.description}
-                                // admin = {true}
                             />
                         ))}
                     </div>

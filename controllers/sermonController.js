@@ -3,7 +3,6 @@ const db = require("../models");
 // Defining methods for the SermonController
 module.exports = {
   findAll: (req, res) => {
-    console.log("HITTING IT")
     db.Sermon
       .find({})
       .then(dbModel => res.json(dbModel))
@@ -15,7 +14,8 @@ module.exports = {
       .create(req.body)
       .then(dbModel => {
         console.log(dbModel)
-        res.json(dbModel)
+        // res.json(dbModel)
+        res.json({msg: "sermon upload was successful!"})
       })
       .catch(err => {
         console.log(err)

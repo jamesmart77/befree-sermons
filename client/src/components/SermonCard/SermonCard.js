@@ -3,6 +3,7 @@ import React from "react";
 const SermonCard = (props) =>
 
   <div className="col s12 m6 l6 xl6">
+    {props.children}
     <div className="card small hoverable blue-grey darken-1">
       <div className="card-content white-text">
         <span className="card-title">{props.title}</span>
