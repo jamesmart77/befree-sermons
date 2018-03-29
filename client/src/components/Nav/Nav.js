@@ -68,7 +68,7 @@ class Nav extends React.Component {
                                         <label className='active' htmlFor='username-input'>username</label>
                                     </div>
                                     <div className='col input-field s12'>
-                                        <input value={this.state.password} onChange={this.handleChange} type='text' name='password' id='password-input' />
+                                        <input value={this.state.password} onChange={this.handleChange} type='password' name='password' id='password-input' />
                                         <label htmlFor='password-input'>password</label>
                                     </div>
                                 </Modal>
