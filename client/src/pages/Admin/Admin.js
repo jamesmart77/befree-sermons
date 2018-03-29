@@ -18,25 +18,12 @@ class Sermons extends Component {
         savedSermons: []
     };
 
-    componentWillMount(){
-        //hit api to validate if user is authenticated
-        //if not, redirect to root path
-        const domainURL = window.location.origin;
-        API.validateUser()
-        .then(res => {
-            console.log("authentication successful", res);
-        })
-        .catch(err => {
-            console.log("authentication failed", err);
-            window.location = domainURL;
-        })
-    }
-
     componentDidMount = update => {
         //get previously saved articles
         API.getSavedSermons()
         .then((res) => {
-            this.setState({savedSermons: res.data})
+            this.setState({savedSermons: res.data});
+            console.log(this.state.savedSermons);
         })
         .catch((err) => console.log(err));
     }
@@ -68,20 +55,23 @@ class Sermons extends Component {
 
         API.saveSermon(params)
         .then(res => {
+            console.log("DATA: ", res.data)
 
             //add saved article to existing state array (push)
             this.setState({ savedSermons: [...this.state.savedSermons, res.data] })
 
             toast("Upload Successful!", {
                 className: css({
-                  background: "#388e3c",
-                  color: "white"
+                background: "#388e3c",
+                color: "white"
                 })
             });
+            
         })
         .catch(err => {
-            console.log("ERR", err)
-            toast.error("Upload Failed. Sermon Titles and Google Drive links must be unique.");
+            toast.error("Whoops, something went wrong. Please log back in.", {
+                onClose: () => window.location = '/'
+            });
         })
     };
 
@@ -153,19 +143,20 @@ class Sermons extends Component {
                         </form>
                     </Row>
                 </div>
-
+        
                {this.state.savedSermons.length ? (
                 
                     <div className="row sermon-collection">
-                        {this.state.savedSermons.map(sermon => (
+                        {this.state.savedSermons.map((sermon) => (
+                             
+                                <SermonCard
+                                    key = {sermon._id}
+                                    title={sermon.title}
+                                    url = {sermon.link}
+                                    date =  {sermon.date}
+                                    description = {sermon.description}
+                                />
                             
-                            <SermonCard
-                                key = {sermon._id.toString()}
-                                title={sermon.title}
-                                url = {sermon.link}
-                                date =  {sermon.date}
-                                description = {sermon.description}
-                            />
                         ))}
                     </div>
                 ) : ""}
