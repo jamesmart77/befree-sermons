@@ -14,7 +14,14 @@ export default {
   //login
   login: (params) => axios.post("/api/admin", params),
 
-  validateUser: () => axios.get("/api/admin"),
+  //authenticate user --> fail redirect to root
+  validateUser: () => {
+    axios.get("/api/admin")
+    .catch(err => {
+      console.log("USER AUTHENTICATION ERROR: ", err);
+      window.location = "/";
+    })
+  },
 
   //save new article
   deleteArticle: (articleId) => axios.delete("/api/article/" + articleId)

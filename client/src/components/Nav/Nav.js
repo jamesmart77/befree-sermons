@@ -57,11 +57,11 @@ class Nav extends React.Component {
                         <a className="logo-wrapper" href="/"><img className="header-logo" src="assets/img/logo.png"  alt="logo"/></a>
                         <ul id="nav-mobile" className="right">
                             {this.state.admin ? (
-                                <Button onClick={this.handleLogOut}>Logout</Button>
+                                <Button className="nav-btn" onClick={this.handleLogOut}>Logout</Button>
                             ) : (
                                 <Modal
                                     header='Login Credentials...'
-                                    trigger={<Button>Admin Login</Button>}
+                                    trigger={<Button className="nav-btn">Admin Login</Button>}
                                     actions={<Button onClick={this.handleSubmit}>Submit</Button>}>
                                     <div className='col input-field s12'>
                                         <input value={this.state.username} onChange={this.handleChange} type='text' name='username' id='username-input' />
