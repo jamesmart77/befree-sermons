@@ -18,7 +18,7 @@ api.get("/", (req, res) => {
             _id: sermon._id,
             date: moment(sermon.date).format("MM-DD-YYYY"),
             title: sermon.title,
-            desc: sermon.description,
+            description: sermon.description,
             link: sermon.link
           }
           updatedData.push(tempObj)
