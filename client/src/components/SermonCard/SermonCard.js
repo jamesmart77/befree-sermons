@@ -9,7 +9,13 @@ const SermonCard = (props) =>
         <p>{props.description}</p>
       </div>
       <div className="card-action blue-grey lighten-5">
-        <p>{props.date}</p>
+        <div>
+        <p>
+          Sermon Date
+          <br/>
+          {props.date}
+        </p>
+        </div>
         <a className="btn-floating btn-medium waves-effect waves-light orange right save-article" href={props.url}>
           <i className="material-icons">file_download</i>
         </a>
