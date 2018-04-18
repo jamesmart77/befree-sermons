@@ -1,14 +1,30 @@
 const api = require("express").Router();
 const sermonController = require("../../controllers/sermonController");
 const jwtAuth = require("../jwtAuth");
+const moment = require('moment');
 
 const db = require("../../models");
 
 // Matches with "/api/sermon"
 api.get("/", (req, res) => {
   db.Sermon
-      .find({})
-      .then(dbModel => res.json(dbModel))
+      .find({}).sort({ date : -1 })//sort newest to oldest
+      .then(dbModel => {
+        const updatedData = [];
+
+        // loop through object and update date format
+        dbModel.forEach(sermon => {
+          let tempObj = {
+            _id: sermon._id,
+            date: moment(sermon.date).format("MM-DD-YYYY"),
+            title: sermon.title,
+            desc: sermon.description,
+            link: sermon.link
+          }
+          updatedData.push(tempObj)
+        })
+        res.json(updatedData)
+      })
       .catch(err => res.status(422).json(err));
 });
 

@@ -15,6 +15,9 @@ const HeaderSection = () => (
                 <p className="mission-statement">
                 We're <b>one</b> church with five locations in southeastern New Hampshire.
                 </p>
+                <p className="mission-statement">
+                Please feel free to share the following resources.
+                </p>
             </div>
 
         </Row>
