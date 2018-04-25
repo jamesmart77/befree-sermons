@@ -55,11 +55,43 @@ nav {
 .main-body {
     background-color: #ebebeb;
     color: #37474f;
-    /* height: 100vh; */
 }
 
 .dash-title {
     font-size: 3rem;
+}
+
+.row-width{
+    width: 100%;
+}
+
+.sermon-header{
+    padding: 0 15px !important;
+}
+
+.sermon-date{
+    line-height: 32px;
+}
+
+.collapsible-header.active .expand-icon {
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+    -webkit-transition-duration: .5s;
+    /* Safari 4.0 - 8.0 */
+    transition-duration: .5s;
+    color: orangered;
+}
+
+.collapsible-header .expand-icon {
+    -webkit-transition-duration: .5s;
+    /* Safari 4.0 - 8.0 */
+    transition-duration: .5s;
+    margin-right: .75rem !important;
+}
+
+.collapsible-body{
+    background: #ebebeb;
 }
 
 .mission-statement {
@@ -70,10 +102,6 @@ nav {
 
 .sermon-hr {
     margin-bottom: 2.5rem;
-}
-
-.sermon-collection {
-    /* margin-bottom: 75px; */
 }
 
 .download-btn{

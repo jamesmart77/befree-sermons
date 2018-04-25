@@ -6,6 +6,7 @@ import Button from '../../components/Button';
 import API from '../../utils/API'
 import { ToastContainer, toast } from 'react-toastify';
 import { css } from 'glamor';
+import {Collapsible} from 'react-materialize';
 
 class Sermons extends Component {
 
@@ -146,8 +147,9 @@ class Sermons extends Component {
         
                {this.state.savedSermons.length ? (
                 
-                    <div className="row sermon-collection">
-                        {this.state.savedSermons.map((sermon) => (
+                    <div className="row">
+                        <Collapsible accordion popout>
+                            {this.state.savedSermons.map((sermon) => (
                              
                                 <SermonCard
                                     key = {sermon._id}
@@ -156,8 +158,8 @@ class Sermons extends Component {
                                     date =  {sermon.date}
                                     description = {sermon.description}
                                 />
-                            
-                        ))}
+                            ))}
+                        </Collapsible>
                     </div>
                 ) : ""}
             </div>

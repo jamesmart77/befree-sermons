@@ -3,7 +3,8 @@ import { Row } from "../../components/Grid";
 import HeaderSection from "../../components/HeaderSection";
 import SermonCard from "../../components/SermonCard";
 import Button from '../../components/Button';
-import API from '../../utils/API'
+import API from '../../utils/API';
+import {Collapsible, CollapsibleItem} from 'react-materialize';
 
 class Sermons extends Component {
 
@@ -73,18 +74,24 @@ class Sermons extends Component {
 
                {this.state.savedSermons.length ? (
                 
-                    <div className="row sermon-collection">
-                        {this.state.savedSermons.map(sermon => (
-                            
-                            <SermonCard
-                                key = {sermon._id.toString()}
-                                title={sermon.title}
-                                url = {sermon.link}
-                                date =  {sermon.date}
-                                description = {sermon.description}
-                            />
-                        ))}
+                    <div className="row">
+                        <Collapsible accordion popout>
+                            {/* <CollapsibleItem header='First'/>
+                            <CollapsibleItem header='Second'/> */}
+                            {this.state.savedSermons.map(sermon => (
+                                
+                                <SermonCard
+                                    key = {sermon._id.toString()}
+                                    title={sermon.title}
+                                    url = {sermon.link}
+                                    date =  {sermon.date}
+                                    description = {sermon.description}
+                                />
+                                
+                            ))}
+                        </Collapsible>
                     </div>
+                    
                 ) : ""}
             </div>
         </main>);
