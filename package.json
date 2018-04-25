@@ -28,7 +28,7 @@
     "moment": "^2.22.1",
     "mongoose": "^4.11.7",
     "nyt": "^0.1.0",
-    "react-materialize": "^2.1.2",
+    "react-materialize": "^2.2.0",
     "react-toastify": "^3.4.3"
   }
 }

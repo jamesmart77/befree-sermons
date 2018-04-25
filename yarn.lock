@@ -1859,9 +1859,9 @@ react-dom@^16.2.0:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
-react-materialize@^2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/react-materialize/-/react-materialize-2.1.2.tgz#ecceb2d1243c1507b2e1bfc97b215f5e262c52ec"
+react-materialize@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/react-materialize/-/react-materialize-2.2.0.tgz#c0298fd638ceb26d0dfc6e78fc3d86654e3f6fab"
   dependencies:
     classnames "^2.2.5"
     react "^16.2.0"
