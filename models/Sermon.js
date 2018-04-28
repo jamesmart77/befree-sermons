@@ -25,7 +25,23 @@ const SermonSchema = new Schema({
   },
   description: {
     type: String,
-    required: false
+    required: true
+  },
+  book: {
+    type: String,
+    required: true
+  },
+  chapter: {
+    type: Number,
+    required: true
+  },
+  startingVerse: {
+    type: Number,
+    required: true
+  },
+  endingVerse: {
+    type: Number,
+    required: true
   }
 });
 

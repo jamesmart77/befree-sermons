@@ -108,6 +108,7 @@ nav {
     width: 30px !important;
     height: 30px !important;
     line-height: 30px !important;
+    margin-top: 15px;
 }
 
 .download-icon{
@@ -117,10 +118,6 @@ nav {
 /* FOOTER */
 
 .page-footer {
-    /* position: sticky; */
-    /* bottom: 0;
-    width: 100%;
-    left: 0; */
     background-color: #607d8b !important;
 }
 
