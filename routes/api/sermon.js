@@ -19,7 +19,11 @@ api.get("/", (req, res) => {
             date: moment(sermon.date).format("MM-DD-YYYY"),
             title: sermon.title,
             description: sermon.description,
-            link: sermon.link
+            link: sermon.link,
+            book: sermon.book,
+            chapter: sermon.chapter,
+            startingVerse: sermon.startingVerse,
+            endingVerse: sermon.endingVerse
           }
           updatedData.push(tempObj)
         })
@@ -28,6 +32,7 @@ api.get("/", (req, res) => {
       .catch(err => res.status(422).json(err));
 });
 
+//save sermon
 api.post("/", jwtAuth, (req, res) => {
   console.log("AUTH STATUS: ", req.authenticated);
 
@@ -35,9 +40,20 @@ api.post("/", jwtAuth, (req, res) => {
     db.Sermon
       .create(req.body)
       .then(dbModel => {
-        console.log(dbModel)
-        // res.status(200).json({authenticated: true, upload: "successful", });
-        res.status(200).json(dbModel);
+
+        let updatedObj = {
+          _id: dbModel._id,
+          date: moment(dbModel.date).format("MM-DD-YYYY"),
+          title: dbModel.title,
+          description: dbModel.description,
+          link: dbModel.link,
+          book: dbModel.book,
+          chapter: dbModel.chapter,
+          startingVerse: dbModel.startingVerse,
+          endingVerse: dbModel.endingVerse
+        }
+        
+        res.status(200).json(updatedObj)
       })
       .catch(err => {
         console.log("UPLOAD ERROR", err);

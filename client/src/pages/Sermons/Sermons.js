@@ -4,15 +4,11 @@ import HeaderSection from "../../components/HeaderSection";
 import SermonCard from "../../components/SermonCard";
 import Button from '../../components/Button';
 import API from '../../utils/API';
-import {Collapsible, CollapsibleItem} from 'react-materialize';
+import {CollapsibleItem, Collapsible} from 'react-materialize';
 
 class Sermons extends Component {
 
     state = {
-        searchCriteria: "",
-        startYear: 2018,
-        endYear:2018,
-        searchResults: [],
         savedSermons: []
     };
 
@@ -76,16 +72,18 @@ class Sermons extends Component {
                 
                     <div className="row">
                         <Collapsible accordion popout>
-                            {/* <CollapsibleItem header='First'/>
-                            <CollapsibleItem header='Second'/> */}
                             {this.state.savedSermons.map(sermon => (
                                 
                                 <SermonCard
-                                    key = {sermon._id.toString()}
+                                    key = {sermon._id}
                                     title={sermon.title}
                                     url = {sermon.link}
                                     date =  {sermon.date}
                                     description = {sermon.description}
+                                    book = {sermon.book}
+                                    chapter = {sermon.chapter}
+                                    startingVerse = {sermon.startingVerse}
+                                    endingVerse = {sermon.endingVerse}
                                 />
                                 
                             ))}

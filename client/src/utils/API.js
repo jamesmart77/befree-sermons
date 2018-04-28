@@ -1,4 +1,5 @@
 import axios from "axios";
+import * as scriptureData from './allBibleData.json';
 
 export default {
 
@@ -24,5 +25,40 @@ export default {
   },
 
   //save new article
-  deleteArticle: (articleId) => axios.delete("/api/article/" + articleId)
+  deleteArticle: (articleId) => axios.delete("/api/article/" + articleId),
+
+  getScriptureBooks: () => {
+    let scriptureBooks = [];
+    scriptureData.books.map(book => {
+      scriptureBooks.push(book.name)
+    })
+
+    return scriptureBooks;
+  },
+
+  getBookChapters: (bookName) => {
+    let chapters = 0; 
+
+    scriptureData.books.map(book => {
+      if(book.name === bookName){
+        chapters = book.chapters[book.chapters.length - 1].chapter
+      }
+    })
+
+    return chapters;
+  },
+
+  getChapterVerse: (bookName, selectedChapter) => {
+    let verses = 0; 
+
+    scriptureData.books.map(book => {
+      if(book.name === bookName){
+        book.chapters.map(chapter => {
+          chapter.chapter === selectedChapter ? verses = chapter.verses : "";
+        })
+      }
+    })
+
+    return verses;
+  }
 };
