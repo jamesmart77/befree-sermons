@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Row } from "../../components/Grid";
-import HeaderSection from "../../components/HeaderSection";
 import SermonCard from "../../components/SermonCard";
-import Button from '../../components/Button';
 import API from '../../utils/API'
 import { ToastContainer, toast } from 'react-toastify';
 import { css } from 'glamor';
@@ -225,8 +223,8 @@ class Sermons extends Component {
                                     onChange={this.handleChapterChange}
                                 >
                                     <option value="" disabled selected>Chapter</option>
-                                    {this.state.bookChapters.map(verse => (
-                                        <option key={verse} value={verse}>{verse}</option>
+                                    {this.state.bookChapters.map(chapter => (
+                                        <option key={chapter} value={chapter}>{chapter}</option>
                                     ))}
                                 </Input>
                                 <Input 
