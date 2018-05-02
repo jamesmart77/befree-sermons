@@ -99,9 +99,16 @@ nav {
 }
 
 /* SERMON SECTION */
+.search-btn{
+    margin: 20px;
+}
 
 .sermon-hr {
     margin-bottom: 2.5rem;
+}
+
+.sermon-scripture{
+    padding: 0 !important;
 }
 
 .download-btn{
@@ -127,8 +134,8 @@ nav {
 
 /* MEDIA QUERIES */
 
-@media only screen and (max-width: 768px) {
-    .page-footer {
-        /* position: relative; */
+@media only screen and (max-width: 600px) {
+    .search-btn{
+        float: right;
     }
 }

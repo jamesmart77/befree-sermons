@@ -14,15 +14,16 @@ const SermonCard = (props) =>
             <i className='material-icons expand-icon right'>expand_more</i>
           </div>
           <div className='col s12'>
-            <div className='col s3 sermon-date'>
+            <div className='col s6 m4 sermon-date'>
               <h6><b>Sermon Date</b></h6>
               <div>{props.date}</div>
             </div>
-            <div className='col s3 sermon-date'>
+            <div className='col s6 m4 sermon-date'>
               <h6><b>Scripture</b></h6>
-              <div>{props.book} {props.chapter} : {props.startingVerse} - {props.endingVerse}</div>
+              <div className='col s12 l5 sermon-scripture'>{props.book}</div>
+              <div className='col s12 l6 sermon-scripture'>{props.chapter} : {props.startingVerse} - {props.endingVerse}</div>
             </div>
-            <div className='col s6'>
+            <div className='col s3 m4 right'>
               <a className="download-btn btn-floating waves-effect waves-light orange right save-article" href={props.url}>
                 <i className="material-icons small download-icon">file_download</i>
               </a>

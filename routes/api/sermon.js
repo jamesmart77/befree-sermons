@@ -32,6 +32,37 @@ api.get("/", (req, res) => {
       .catch(err => res.status(422).json(err));
 });
 
+// /api/sermon/search
+api.post("/search", (req, res) => {
+
+  // remove chapter key from req.body if no criteria is present
+  req.body.chapter === '' ? delete req.body.chapter : '';
+
+  db.Sermon
+      .find(req.body).sort({ chapter : 1 })//sort newest to oldest
+      .then(dbModel => {
+        const updatedData = [];
+
+        // loop through object and update date format
+        dbModel.forEach(sermon => {
+          let tempObj = {
+            _id: sermon._id,
+            date: moment(sermon.date).format("MM-DD-YYYY"),
+            title: sermon.title,
+            description: sermon.description,
+            link: sermon.link,
+            book: sermon.book,
+            chapter: sermon.chapter,
+            startingVerse: sermon.startingVerse,
+            endingVerse: sermon.endingVerse
+          }
+          updatedData.push(tempObj)
+        })
+        res.status(201).json(updatedData)
+      })
+      .catch(err => res.status(422).json(err));
+});
+
 //save sermon
 api.post("/", jwtAuth, (req, res) => {
   console.log("AUTH STATUS: ", req.authenticated);
