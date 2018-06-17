@@ -13,7 +13,7 @@ const HeaderSection = () => (
                 <b>BeFree</b> is a partnership of interdependent local churches dedicated to advancing the Good News of Jesus Christ through a shared vision of making disciples, mentoring next-generation leaders, and developing new churches.
                 </p>
                 <p className="mission-statement">
-                We're <b>one</b> church with five locations in southeastern New Hampshire.
+                We're <b>one</b> church with four locations in southeastern New Hampshire.
                 </p>
                 <p className="mission-statement">
                 Please feel free to share the following resources.

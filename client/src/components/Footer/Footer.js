@@ -11,7 +11,7 @@ const Footer = () =>
                         <h5 className="white-text">BeFree Community Church</h5>
                     </a>
 
-                    <p className="grey-text text-lighten-4">One Church, Five Locations</p>
+                    <p className="grey-text text-lighten-4">One Church, Four Locations</p>
 
                     <a href="http://befree.church/our-distinctives">
                         <p className="grey-text text-lighten-4">What We Believe</p>
@@ -23,7 +23,6 @@ const Footer = () =>
                         <li><a className="grey-text text-lighten-3" href="http://befree.church/alton-home" target="on_blank">Alton</a></li>
                         <li><a className="grey-text text-lighten-3" href="http://befree.church/barrington-home" target="on_blank">Barrington</a></li>
                         <li><a className="grey-text text-lighten-3" href="http://befree.church/dover-home" target="on_blank">Dover</a></li>
-                        <li><a className="grey-text text-lighten-3" href="http://befree.church/newmarket-home" target="on_blank">Newmarket</a></li>
                         <li><a className="grey-text text-lighten-3" href="http://befree.church/somersworth-home" target="on_blank">Somersworth</a></li>
                     </ul>
                 </div>

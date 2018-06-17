@@ -1,4 +1,4 @@
-# newsAnnotater
-News search app in a single page powered by React, Mongo, Express, and Node (MERN). Dynamically search for articles and save with annotation.
+# BeFree Community Church Tech App
+Currently used to provide recorded sermons from BeFree Community Church in Somersworth, NH.
 
-See the deployed app [HERE](https://infomator.herokuapp.com/)
+See the deployed app [HERE](https://befreetech.herokuapp.com/)
