@@ -7,14 +7,18 @@ import {Collapsible, Input, Button} from 'react-materialize';
 import { ToastContainer, toast } from 'react-toastify';
 
 class Sermons extends Component {
-
-    state = {
-        savedSermons: [],
-        bibleBooks: [],
-        bookChapters: [],
-        book: '',
-        chapter: ''
-    };
+    
+    constructor() {
+        super();
+        this.state = {
+            savedSermons: [],
+            bibleBooks: [],
+            bookChapters: [],
+            book: '',
+            chapter: '',
+            admin: false
+        }
+    }
 
     componentDidMount = update => {
         //get previously saved articles

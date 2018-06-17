@@ -8,20 +8,25 @@ import {Collapsible, Input} from 'react-materialize';
 
 class Sermons extends Component {
 
-    state = {
-        title: "",
-        link: "",
-        date: "",
-        description: "",
-        book: '',
-        chapter: '',
-        startingVerse: '',
-        endingVerse: '',
-        savedSermons: [],
-        bibleBooks: [],
-        bookChapters: [],
-        verses: []
-    };
+    constructor() {
+        super();
+        this.state = {
+            title: "",
+            link: "",
+            date: "",
+            description: "",
+            book: '',
+            chapter: '',
+            startingVerse: '',
+            endingVerse: '',
+            savedSermons: [],
+            bibleBooks: [],
+            bookChapters: [],
+            verses: [],
+            isAdmin: true
+        }
+    }
+    
 
     componentDidMount = update => {
         //get previously saved articles
@@ -280,6 +285,7 @@ class Sermons extends Component {
                                     chapter = {sermon.chapter}
                                     startingVerse = {sermon.startingVerse}
                                     endingVerse = {sermon.endingVerse}
+                                    isAdmin = {this.state.isAdmin}
                                 />
                             ))}
                         </Collapsible>
