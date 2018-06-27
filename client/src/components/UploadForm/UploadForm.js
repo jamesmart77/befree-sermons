@@ -28,7 +28,6 @@ const UploadForm = (props) => {
                         label='Sermon Date'
                         name="date"
                         id="date"
-                        validate={true}
                         value={date}
                         onChange={props.handleInputChange}
                     />
