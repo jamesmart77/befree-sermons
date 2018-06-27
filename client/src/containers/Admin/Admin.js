@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import { Row } from "../../components/Grid";
-import SermonCard from "../../components/SermonCard";
 import API from '../../utils/API'
 import { ToastContainer, toast } from 'react-toastify';
 import { css } from 'glamor';
-import {Collapsible, Input} from 'react-materialize';
+import {Collapsible, Row} from 'react-materialize';
+import SermonCard from "../../components/SermonCard";
 import UploadForm from '../../components/UploadForm';
+import PropTypes from 'prop-types';
 
-class Sermons extends Component {
+class Admin extends Component {
 
     constructor() {
         super();
@@ -149,8 +149,9 @@ class Sermons extends Component {
 
   render() {
 
-    const {title, date, link, description, book, chapter, startingVerse,
-        endingVerse, bibleBooks, bookChapters, verses} = this.state;
+    const {title, date, link, description, book,
+        chapter, startingVerse, endingVerse, bibleBooks,
+        bookChapters, verses, savedSermons, isAdmin} = this.state;
 
     return (
         <main className="main-body">
@@ -175,11 +176,10 @@ class Sermons extends Component {
 
                 <ToastContainer/>
         
-               {this.state.savedSermons.length ? (
-                
-                    <div className="row">
+               {savedSermons.length ? (
+                    <Row>
                         <Collapsible accordion popout>
-                            {this.state.savedSermons.map((sermon) => (
+                            {savedSermons.map((sermon) => (
                              
                                 <SermonCard
                                     key = {sermon._id}
@@ -191,15 +191,31 @@ class Sermons extends Component {
                                     chapter = {sermon.chapter}
                                     startingVerse = {sermon.startingVerse}
                                     endingVerse = {sermon.endingVerse}
-                                    isAdmin = {this.state.isAdmin}
+                                    isAdmin = {isAdmin}
                                 />
                             ))}
                         </Collapsible>
-                    </div>
+                    </Row>
                 ) : ""}
             </div>
         </main>);
     };
+}
+
+Admin.PropTypes = {
+    title: PropTypes.string,
+    date: PropTypes.string,
+    link: PropTypes.string,
+    description: PropTypes.string,
+    book: PropTypes.string,
+    chapter: PropTypes.number,
+    startingVerse: PropTypes.number,
+    endingVerse: PropTypes.number,
+    bibleBooks: PropTypes.array,
+    bookChapters: PropTypes.array,
+    verses: PropTypes.array,
+    savedSermons: PropTypes.array,
+    isAdmin: PropTypes.bool
 };
 
-export default Sermons;
+export default Admin;
