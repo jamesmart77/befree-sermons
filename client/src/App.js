@@ -1,8 +1,8 @@
 import React from "react";
 import { Router, Route, Switch } from "react-router-dom";
-import Sermons from "./containers/Sermons";
-import Admin from "./containers/Admin";
-import NoMatch from "./containers/NoMatch";
+import Sermons from "./pages/Sermons";
+import Admin from "./pages/Admin";
+import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer/Footer";
 import history from './utils/history';
