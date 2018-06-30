@@ -31,7 +31,7 @@ const SermonCard = (props) => {
                 <a className="download-btn btn-floating waves-effect waves-light orange right save-article" href={url}>
                   <i className="material-icons small download-icon">file_download</i>
                 </a>
-                {isAdmin === true ? (
+                {isAdmin &&
                   <div>
                     <a className="download-btn btn-floating waves-effect waves-light blue right save-article">
                       <i className="material-icons small download-icon">edit</i>
@@ -40,7 +40,7 @@ const SermonCard = (props) => {
                       <i className="material-icons small download-icon">delete</i>
                     </a>
                   </div>
-                ) : ''} 
+                } 
               </div>
             </div>
           </div>

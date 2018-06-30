@@ -31,7 +31,6 @@ class Admin extends Component {
             isAdmin: true
         }
     }
-    
 
     componentDidMount = () => {
         //get previously saved articles
@@ -46,7 +45,6 @@ class Admin extends Component {
         this.setState({ bibleBooks: data})        
     };
 
-    
     handleInputChange = (event) => {
         const { name, value } = event.target;
 
